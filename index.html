@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ritvika Kedia - Data & Insights Analyst Portfolio</title>
     <style>
+        /* Define styles for your pages */
         :root {
             --purplish-blue: #5D3FD3;
             --african-violet: #B284BE;
@@ -49,9 +50,7 @@
         nav ul {
             list-style-type: none;
             display: flex;
-        }
-        nav ul li {
-            margin-left: 20px;
+            gap: 20px;
         }
         nav ul li a {
             color: var(--white);
@@ -88,72 +87,44 @@
             margin-bottom: 0.5rem;
             color: var(--african-violet);
         }
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--amethyst-purple);
-        }
-        p {
-            margin-bottom: 1rem;
-        }
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-        .social-icons a {
-            color: var(--white);
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-        .social-icons a:hover {
-            color: var(--electric-blue);
-        }
         .btn {
-            display: inline-block;
             background-color: var(--northwestern-purple);
-            color: var(--white);
             padding: 0.5rem 1rem;
-            text-decoration: none;
             border-radius: 5px;
+            text-decoration: none;
+            color: var(--white);
             transition: background-color 0.3s ease;
         }
         .btn:hover {
             background-color: var(--purplish-blue);
-        }
-        section {
-            padding: 4rem 0;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-        }
-        .skill-item {
-            background-color: var(--amethyst-purple);
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
-        .experience-item {
-            margin-bottom: 2rem;
-        }
-        .experience-item h3 {
-            color: var(--electric-blue);
-        }
-        .experience-item p {
-            margin-bottom: 0.5rem;
         }
         footer {
             background-color: var(--purplish-blue);
             color: var(--white);
             text-align: center;
             padding: 1rem 0;
+        }
+        .side-menu {
+            position: fixed;
+            right: 0;
+            top: 80px;
+            background-color: var(--black);
+            padding: 10px;
+            border-left: 2px solid var(--electric-blue);
+        }
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        .side-menu ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: var(--white);
+            text-decoration: none;
+        }
+        .side-menu ul li a:hover {
+            background-color: var(--electric-blue);
+            color: var(--black);
         }
     </style>
 </head>
@@ -162,11 +133,12 @@
         <nav class="container">
             <div class="logo">Portfolio.</div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -177,67 +149,24 @@
                 <h1>Hello, I'm</h1>
                 <h2>Ritvika Kedia</h2>
                 <p>Data & Insights Analyst specializing in AI and TMT sectors</p>
-                <p>Dynamic and adaptable analyst with a passion for leveraging insights to drive impact. Proficient in SQL, R, and data visualization tools, with a background in psychology.</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/ritvikakedia/"><i class="fab fa-linkedin"></i></a>
-                </div>
-                <a href="#" class="btn">Download CV</a>
+                <a href="downloads/CV.pdf" class="btn">Download CV</a>
             </div>
             <div class="hero-image">
-                <img src="/api/placeholder/400/400" alt="Ritvika Kedia">
+                <img src="images/ritvika-profile.jpg" alt="Ritvika Kedia">
             </div>
-        </section>
-
-        <section id="about" class="container">
-            <h2 class="section-title">About Me</h2>
-            <p>I'm a Data & Insights Analyst with a focus on the TMT and research sectors, particularly in AI. With a background in psychology and a 2:1 BSc from the University of Exeter, I bring a unique perspective to data analysis. I'm known for my adaptability, organisation, and strategic planning skills, which I've honed through various work and volunteer experiences.</p>
-        </section>
-
-        <section id="skills" class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-list">
-                <span class="skill-item">SQL (AWS Athena, Postgres SQL)</span>
-                <span class="skill-item">R (R Studio)</span>
-                <span class="skill-item">Excel (FMVA-certified)</span>
-                <span class="skill-item">Data Visualization (Flourish, Power BI)</span>
-                <span class="skill-item">Statistical Analysis (IBM SPSS)</span>
-                <span class="skill-item">Python (Pandas)</span>
-                <span class="skill-item">Quantitative and Qualitative Research Analysis</span>
-                <span class="skill-item">Data Quality Assurance</span>
-            </div>
-        </section>
-
-        <section id="experience" class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="experience-item">
-                <h3>Data and Insights Analyst</h3>
-                <p>Zeki Research - London (03/2023 - Current)</p>
-                <ul>
-                    <li>Conducted end-to-end quantitative and qualitative analysis in AI and semiconductor sectors</li>
-                    <li>Developed tailored methodologies and created visually impactful dashboards using Power BI and Flourish</li>
-                    <li>Automated client presentation slides using SQL, Excel, and Power BI</li>
-                    <li>Led quality assurance efforts using Python (pandas) and manual techniques</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Research Analyst</h3>
-                <p>Analysys Mason - London (09/2022 - 01/2023)</p>
-                <ul>
-                    <li>Produced and published high-quality analytical reports in the telecoms industry</li>
-                    <li>Collaborated with research directors on co-authored reports</li>
-                    <li>Conducted research on gamification, telecoms operators, and virtual assistant solutions</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="contact" class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <p>Get in touch with me for any work or suggestions below.</p>
-            <p>Email: ritvika.kedia@icloud.com</p>
-            <p>Phone: 07751869036</p>
-            <p>Location: Wickford, Essex SS11 8NF</p>
         </section>
     </main>
+
+    <aside class="side-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </aside>
 
     <footer>
         <p>&copy; 2024 Ritvika Kedia. All rights reserved.</p>
