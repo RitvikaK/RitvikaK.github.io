@@ -1,4 +1,4 @@
-/* Define global variables for colors */
+/* Color Variables */
 :root {
     --purplish-blue: #5D3FD3;
     --african-violet: #B284BE;
@@ -9,7 +9,7 @@
     --northwestern-purple: #4E2A84;
 }
 
-/* General body and layout */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -25,9 +25,9 @@ body {
     padding: 0 20px;
 }
 
-/* Header and navigation */
+/* Header Styling */
 header {
-    background-color: rgba(76, 0, 138, 0.8); /* Slightly opaque purple */
+    background-color: rgba(29, 29, 29, 0.8);
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
@@ -48,19 +48,19 @@ nav {
     color: var(--electric-blue);
 }
 
-.nav-links {
+nav ul {
+    list-style-type: none;
     display: flex;
     gap: 20px;
-    margin-left: auto; /* Right-align the links */
 }
 
-.nav-links a {
+nav ul li a {
     color: var(--white);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+nav ul li a:hover {
     color: var(--electric-blue);
 }
 
@@ -70,12 +70,21 @@ nav {
     align-items: center;
     justify-content: space-between;
     min-height: 100vh;
-    padding-top: 80px; /* Adjust for fixed header */
-    color: var(--african-violet);
+    padding-top: 80px;
 }
 
 .hero-content {
     flex: 1;
+}
+
+.hero h1, .hero h2, .hero p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--african-violet);
 }
 
 .hero-image {
@@ -83,82 +92,24 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 80vh;
+    margin-top: 20px;
 }
 
 .hero-image img {
     max-width: 80%;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    clip-path: circle;
     border: 4px solid var(--electric-blue);
     box-shadow: 0 0 20px var(--electric-blue);
 }
 
-/* Typography */
-h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    color: var(--african-violet);
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--amethyst-purple);
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-/* Skills and sections */
-section {
-    padding: 4rem 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--white);
-}
-
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.skill-item {
-    background-color: var(--amethyst-purple);
-    color: var(--white);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-/* Experience items */
-.experience-item {
-    margin-bottom: 2rem;
-}
-
-.experience-item h3 {
-    color: var(--electric-blue);
-}
-
-/* Footer */
-footer {
-    background-color: var(--purplish-blue);
-    color: var(--white);
-    text-align: center;
-    padding: 1rem 0;
-}
-
-/* Buttons */
+/* Button Styling */
 .btn {
-    display: inline-block;
     background-color: var(--northwestern-purple);
-    color: var(--white);
     padding: 0.5rem 1rem;
-    text-decoration: none;
     border-radius: 5px;
+    text-decoration: none;
+    color: var(--white);
     transition: background-color 0.3s ease;
 }
 
@@ -166,34 +117,31 @@ footer {
     background-color: var(--purplish-blue);
 }
 
-/* Social icons */
-.social-icons {
-    display: flex;
-    gap: 1rem;
+/* Footer Styling */
+footer {
+    background-color: var(--purplish-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2rem;
+    color: var(--african-violet);
     margin-bottom: 1rem;
 }
 
-.social-icons a {
-    color: var(--white);
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
+/* Experience and About Sections */
+.experience-item, #about p {
+    margin-bottom: 1rem;
 }
 
-.social-icons a:hover {
-    color: var(--electric-blue);
+/* Utility Classes */
+.text-center {
+    text-align: center;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .hero {
-        flex-direction: column;
-    }
-
-    .hero-image img {
-        max-width: 100%;
-    }
+.mt-2 {
+    margin-top: 2rem;
 }
