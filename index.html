@@ -4,12 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ritvika Kedia - Data & Insights Analyst Portfolio</title>
-    
-    <!-- Link to the external CSS file for consistent styling -->
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Define styles for your pages */
+        :root {
+            --purplish-blue: #5D3FD3;
+            --african-violet: #B284BE;
+            --amethyst-purple: #9966CC;
+            --black: #1A1A1A;
+            --white: #FFFFFF;
+            --electric-blue: #1038eb;
+            --northwestern-purple: #4E2A84;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--white);
+            background-color: var(--black);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: rgba(29, 29, 29, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--electric-blue);
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--electric-blue);
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        .hero-content {
+            flex: 1;
+        }
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh; 
+    margin-top: 20px; 
+        }
+        .hero-image img {
+            max-width: 80%;
+            clip-path: circle;
+            border: 4px solid var(--electric-blue);
+            box-shadow: 0 0 20px var(--electric-blue);
+        }
+     <div class="hero-image">
+    <img src="images/myhero.png" alt="Hero Image"> 
+</div>
+
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: var(--african-violet);
+        }
+        .btn {
+            background-color: var(--northwestern-purple);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            color: var(--white);
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: var(--purplish-blue);
+        }
+        footer {
+            background-color: var(--purplish-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 1rem 0;
+        }
+        
+        
+    </style>
 </head>
 <body>
-    <!-- Header with Navigation Links -->
     <header>
         <nav class="container">
             <div class="logo">Portfolio.</div>
@@ -24,7 +130,6 @@
         </nav>
     </header>
 
-    <!-- Main Hero Section -->
     <main>
         <section id="home" class="hero container">
             <div class="hero-content">
@@ -39,7 +144,8 @@
         </section>
     </main>
 
-    <!-- Footer Section -->
+   
+
     <footer>
         <p>&copy; 2024 Ritvika Kedia. All rights reserved.</p>
     </footer>
