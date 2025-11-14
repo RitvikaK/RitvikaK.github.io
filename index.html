@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <title>Ritvika Kedia - Portfolio</title>
+    
 <style>
 /* COLORS */
 :root {
@@ -14,10 +15,66 @@
     --white: #FFFFFF;
 }
 
-/* Background black */
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
 body {
     background-color: var(--black);
     color: var(--white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* HEADER & NAVIGATION */
+header {
+    background-color: rgba(78, 42, 132, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--african-violet);
 }
 
 /* HERO LAYOUT */
@@ -27,29 +84,104 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     padding-top: 80px;
+    gap: 4rem;
 }
 
-/* HERO IMAGE – circle, no blue glow */
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: var(--northwestern-purple);
+    margin: 0;
+}
+
+.hero-content h2 {
+    font-size: 32px;
+    color: var(--amethyst-purple);
+    margin-top: 10px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: var(--african-violet);
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    background-color: var(--northwestern-purple);
+    color: var(--white);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--northwestern-purple);
+}
+
+.btn:hover {
+    background-color: var(--amethyst-purple);
+    border-color: var(--amethyst-purple);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(78, 42, 132, 0.4);
+}
+
+/* HERO IMAGE */
+.hero-image {
+    flex: 0 0 auto;
+}
+
 .hero-image img {
     width: 320px;
     height: 320px;
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid var(--northwestern-purple);
-    box-shadow: none;
 }
 
-/* FOOTER HIGHER */
+/* FOOTER */
 footer {
     margin-top: 40px;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     background-color: var(--northwestern-purple);
     color: var(--white);
     text-align: center;
 }
-</style>   <!-- ✅ THIS WAS MISSING -->
-</head>
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 100px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .hero-content h2 {
+        font-size: 24px;
+    }
+    
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+}
+</style>
+</head>
 <body>
     <header>
         <nav class="container">
@@ -61,36 +193,24 @@ footer {
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            </ul> <!-- ✅ UL CLOSED -->
+            </ul>
         </nav>
     </header>
-
+    
     <main>
         <section class="hero container">
             <div class="hero-content">
-
-<h1 style="font-size: 48px; color: #4E2A84; margin: 0;">
-    Ritvika Kedia
-</h1>
-
-<h2 style="font-size: 32px; color: #9966CC; margin-top: 10px;">
-    Data & Insights Analyst
-</h2>
-
-<p style="font-size: 20px; color: #B284BE; margin-top: 15px;">
-    smart quote or line
-</p>
-
-<a href="downloads/Ritvika_Kedia_CV_Oct_2025.pdf" class="btn">Download CV</a>
-
+                <h1>Ritvika Kedia</h1>
+                <h2>Data & Insights Analyst</h2>
+                <p>Transforming data into actionable insights</p>
+                <a href="downloads/Ritvika_Kedia_CV_Oct_2025.pdf" class="btn">Download CV</a>
             </div>
-
             <div class="hero-image">
                 <img src="images/myhero.png" alt="Ritvika Kedia">
             </div>
         </section>
     </main>
-
+    
     <footer>
         <p>&copy; 2024 Ritvika Kedia. All rights reserved.</p>
     </footer>
