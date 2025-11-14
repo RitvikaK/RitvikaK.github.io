@@ -4,87 +4,276 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience - Ritvika Kedia</title>
-
     <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 2rem;
+        /* COLORS */
+        :root {
+            --northwestern-purple: #4E2A84;
+            --amethyst-purple: #9966CC;
+            --african-violet: #B284BE;
+            --black: #000000;
+            --white: #FFFFFF;
         }
-        <header>
+
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* BODY */
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background-color: rgba(78, 42, 132, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: var(--african-violet);
+        }
+
+        /* MAIN CONTENT */
+        main {
+            padding-top: 100px;
+            padding-bottom: 60px;
+            min-height: calc(100vh - 80px);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            margin-top: 4rem;
+        }
+
+        .page-header h1 {
+            color: var(--northwestern-purple);
+            font-size: 48px;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: var(--african-violet);
+            font-size: 20px;
+        }
+
+        /* EXPERIENCE SECTION */
+        .experience-item {
+            background-color: rgba(78, 42, 132, 0.1);
+            border-left: 4px solid var(--northwestern-purple);
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(78, 42, 132, 0.3);
+        }
+
+        .experience-item h2 {
+            color: var(--amethyst-purple);
+            font-size: 24px;
+            margin-bottom: 1rem;
+        }
+
+        .experience-item ul {
+            list-style-position: inside;
+            margin-top: 1rem;
+        }
+
+        .experience-item li {
+            color: var(--african-violet);
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+        }
+
+        .experience-item li::marker {
+            color: var(--northwestern-purple);
+        }
+
+        .additional-experience {
+            margin-top: 3rem;
+        }
+
+        .additional-experience h2 {
+            color: var(--northwestern-purple);
+            font-size: 32px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .additional-experience ul {
+            list-style: none;
+        }
+
+        .additional-experience li {
+            background-color: rgba(153, 102, 204, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--amethyst-purple);
+        }
+
+        .additional-experience strong {
+            color: var(--amethyst-purple);
+            font-size: 20px;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 1.5rem 0;
+            background-color: var(--northwestern-purple);
+            color: var(--white);
+            text-align: center;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+            }
+
+            .page-header h1 {
+                font-size: 36px;
+            }
+
+            .experience-item {
+                padding: 1.5rem;
+            }
+
+            .experience-item h2 {
+                font-size: 20px;
+            }
+
+            .experience-item li {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
         <nav class="container">
             <div class="logo">Portfolio</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="skills.html">Skills</a></li>
-                <li><a href="experience.html">Experience</a></li>
+                <li><a href="experience.html" class="active">Experience</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <main class="container">
+        <div class="page-header">
+            <h1>Professional Experience</h1>
+            <p>A journey of growth through data, insights, and operations</p>
+        </div>
 
-        h1 {
-            color: #4E2A84;
-            margin-bottom: 2rem;
-        }
+        <div class="experience-item">
+            <h2>Marketing & Operations Lead — Jain's Central Park East (2025–Present)</h2>
+            <ul>
+                <li>Manage daily operations across sales, accounts, and customer coordination for a 30-acre real estate project.</li>
+                <li>Track site visits, revisits, prospect engagement, and bookings.</li>
+                <li>Oversee weekly marketing initiatives including exhibitions and LinkedIn content.</li>
+                <li>Coordinate with pre-sales to resolve customer issues and improve conversion processes.</li>
+                <li>Created and managed the official LinkedIn page and content calendar.</li>
+                <li>Led customer engagement at exhibitions, generating qualified leads.</li>
+            </ul>
+        </div>
 
-        h2 {
-            color: #9966CC;
-            margin-top: 2rem;
-        }
+        <div class="experience-item">
+            <h2>Data & Insights Analyst — Zeki Research (2023–2024)</h2>
+            <ul>
+                <li>Produced 4 flagship reports and multiple client presentations.</li>
+                <li>Processed and validated large datasets using SQL, R, dbt, and AWS Athena.</li>
+                <li>Achieved 90%+ accuracy in cleaning, loading, and QA processes.</li>
+                <li>Conducted industry, country, and career-stage analysis using statistical metrics.</li>
+                <li>Built visual dashboards using Power BI and Flourish.</li>
+                <li>Generated LinkedIn content achieving 200+ impressions weekly.</li>
+            </ul>
+        </div>
 
-        p, li {
-            color: #B284BE;
-            font-size: 18px;
-            line-height: 1.6;
-        }
+        <div class="experience-item">
+            <h2>Research Analyst — Analysys Mason (2022–2023)</h2>
+            <ul>
+                <li>Published 5+ industry articles and presentations on AI, consumer behaviour, and global energy markets.</li>
+                <li>Contributed to market sizing, forecasting, and competitive analysis.</li>
+                <li>Built data-backed narratives in collaboration with senior consultants.</li>
+            </ul>
+        </div>
 
-        ul {
-            margin-top: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-    </style>
-</head>
+        <div class="additional-experience">
+            <h2>Additional Experience</h2>
+            <ul>
+                <li>
+                    <strong>STEM Volunteer — Primary School STEM Group</strong>
+                    Delivered hands-on STEM sessions and supported lesson planning.
+                </li>
+                <li>
+                    <strong>Customer Service Volunteer — Cancer Research UK</strong>
+                    Provided store support and developed strong communication skills.
+                </li>
+            </ul>
+        </div>
+    </main>
 
-<body>
-    
-    <h1>Professional Experience</h1>
-
-    <h2>Marketing & Operations Lead — Jain’s Central Park East (2025–Present)</h2>
-    <ul>
-        <li>Manage daily operations across sales, accounts, and customer coordination for a 30-acre real estate project.</li>
-        <li>Track site visits, revisits, prospect engagement, and bookings.</li>
-        <li>Oversee weekly marketing initiatives including exhibitions and LinkedIn content.</li>
-        <li>Coordinate with pre-sales to resolve customer issues and improve conversion processes.</li>
-        <li>Created and managed the official LinkedIn page and content calendar.</li>
-        <li>Led customer engagement at exhibitions, generating qualified leads.</li>
-    </ul>
-
-    <h2>Data & Insights Analyst — Zeki Research (2023–2024)</h2>
-    <ul>
-        <li>Produced 4 flagship reports and multiple client presentations.</li>
-        <li>Processed and validated large datasets using SQL, R, dbt, and AWS Athena.</li>
-        <li>Achieved 90%+ accuracy in cleaning, loading, and QA processes.</li>
-        <li>Conducted industry, country, and career-stage analysis using statistical metrics.</li>
-        <li>Built visual dashboards using Power BI and Flourish.</li>
-        <li>Generated LinkedIn content achieving 200+ impressions weekly.</li>
-    </ul>
-
-    <h2>Research Analyst — Analysys Mason (2022–2023)</h2>
-    <ul>
-        <li>Published 5+ industry articles and presentations on AI, consumer behaviour, and global energy markets.</li>
-        <li>Contributed to market sizing, forecasting, and competitive analysis.</li>
-        <li>Built data-backed narratives in collaboration with senior consultants.</li>
-    </ul>
-
-    <h2>Additional Experience</h2>
-    <ul>
-        <li><strong>STEM Volunteer — Primary School STEM Group</strong>: Delivered hands-on STEM sessions and supported lesson planning.</li>
-        <li><strong>Customer Service Volunteer — Cancer Research UK</strong>: Provided store support and developed strong communication skills.</li>
-    </ul>
+    <footer>
+        <p>&copy; 2024 Ritvika Kedia. All rights reserved.</p>
+    </footer>
 </body>
 </html>
